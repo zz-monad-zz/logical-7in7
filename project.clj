@@ -1,6 +1,6 @@
 (defproject logical-7in7 "0.1.0-SNAPSHOT"
   :description "miniKanren chapter from Seven More Languages in Seven Weeks"
-  :url ""
+  :url "https://github.com/zz-monad-zz/logical-7in7"
   :license {:name "MIT"
             :url "queue://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.8.0"]
