@@ -70,6 +70,7 @@
  (db-fact systemo :frances-allen :imperative)
  (db-fact systemo :john-mccarthy :functional)))
 
+
 (defn easy_3 []
   (with-db facts
    (run* [q] 
@@ -77,10 +78,30 @@
          (languageo q :clojure) 
          (vitalo q :alive))))
 
+
 (defn easy_4 []
   (with-db facts
    (run* [q] 
          (womano q) 
          (languageo q :clojure) 
          (vitalo q :alive))))
+
+
+(defn scientisto [q]
+ (conde
+   [(womano q)]
+   [(mano q)]))
+
+
+(defn medium_1 []
+  (with-db facts
+   (run* [q] (scientisto q ))))
+
+
+(defn medium_2 []
+  (with-db facts
+   (run* [q] 
+     (fresh [y]
+       (scientisto q) 
+       (turingo q y)))))
 
